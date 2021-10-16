@@ -1,7 +1,12 @@
+
 import PropTypes from "prop-types";
+import {ReactComponent as PlusIcon} from './icon.svg'
+import './styles.scss'
 
 export const Button= ({label,size})=>{
-    return<button  style={{padding:`${size}px`}}>{label}</button>
+
+    
+    return<button  className={'btn__usecase'}><PlusIcon/>{label}</button>
 }
 
 Button.propTypes={

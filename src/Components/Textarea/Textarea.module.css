@@ -1,0 +1,9 @@
+.main {
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.2);
+  border: 1px solid rgba(67, 34, 255, 0.2);
+  width: 500px;
+  height: auto;
+  overflow-x: scroll;
+  padding: 10px;
+  text-align: center;
+}

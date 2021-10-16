@@ -1,47 +1,52 @@
-import {Title} from "../Title/Title";
-import {Button} from "../Button/Button";
+import { Title } from "../Title/Title";
+import { Button } from "../Button/Button";
+import { Textarea } from "../Textarea/Textarea";
+import { CustomContent } from "./Content.styled";
 
+import { ReactComponent as Animal } from "./imgs/animal.svg";
+import { ReactComponent as Point } from "./imgs/point.svg";
 
 const titleData = [
-    {
-        text: 'Информация о университете',
-        show: true,
-        unique: 1
-    },
-    {
-        text: 'Преподаватели',
-        show: true,
-        unique: 2
-    }, {
-        text: 'Города',
-        show: false,
-        unique: 3
-    }, {
-        text: 'Факультеты',
-        show: true,
-        unique: 4
-    },
-]
+  {
+    text: "Информация о университете",
+    show: true,
+    unique: 1,
+  },
+  {
+    text: "Преподаватели",
+    show: true,
+    unique: 2,
+  },
+  {
+    text: "Города",
+    show: false,
+    unique: 3,
+  },
+  {
+    text: "Факультеты",
+    show: true,
+    unique: 4,
+  },
+];
 
 export const Content = () => {
-    const showTitle = true
-    return <>
-        <div style={{width: '100%', flexShrink: '0.5', backgroundColor: 'orange'}}>
+  // const showTitle = true
+  return (
+    <>
+      <CustomContent>
+        <Title
+          text="Информация о университете"
+          style={{ alignSelf: "flex-end" }}
+        />
 
-
-            {titleData.map(el => (
-                <Title text={el.text} show={el.show} key={`${el.text}-${el.unique}`}/>
-            ))}
-
-
-            {/*Collection render*/}
-            <ul>
-                {titleData.map(el => (<li key={el.text}>{el.text}</li>))}
-            </ul>
-
-
-            <Button label={'Добавить преподавателя'} type={'link'} size={10}/>
-
+        <div className={"no_card_univer"}>
+          <Textarea info="Опыт, концентрат знаний и возможность избежать большинство ошибок при приеме на работу. Мы знаем, что хотят большинство локальных и иностранных компаний и можем вам это дать. А еще мы постоянно совершенствуем наши курсы программирования, добавляя туда что-то новое. Вы можете лично ознакомиться с историями успеха наших выпускников, чтобы убедиться в эффективности нашей методики обучения. Да, мы начнем с азов и самой простой информации. Знаем, что большинство людей приходят к нам с нулевыми знаниями." />
         </div>
+        <Title text="Преподаватели" icon={<Animal />} />
+        <Textarea info="Опыт, концентрат знаний и возможность избежать большинство ошибок при приеме на работу. Мы знаем, что хотят большинство локальных и иностранных компаний и можем вам это дать. А еще мы постоянно совершенствуем наши курсы программирования, добавляя туда что-то новое. Вы можете лично ознакомиться с историями успеха наших выпускников, чтобы убедиться в эффективности нашей методики обучения. Да, мы начнем с азов и самой простой информации. Знаем, что большинство людей приходят к нам с нулевыми знаниями." />
+        <Button label={"Добавить преподавателя"} type={"link"} size={10} />
+        <Title text="Города" icon={<Point />} />
+      </CustomContent>
     </>
-}
+  );
+};

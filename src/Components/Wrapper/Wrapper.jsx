@@ -1,14 +1,16 @@
-import {Content} from "../Content/Content";
-import {Sidebar} from "../Sidebar/Sidebar";
+import { Content } from "../Content/Content";
+import { Debug } from "../Debug/Debug";
+import { Sidebar } from "../Sidebar/Sidebar";
+import { CustomWrapper } from "./Wrapper.styled";
 
 export const Wrapper = () => {
-
-    const isView = false
-    return <>
-        <div style={{display: 'flex', flexDirection: 'row', width: '100%',height:'70%'}}>
-
-            {isView ? <Sidebar/>:<div>1</div>}
-            <Content/>
-        </div>
+  // const isView = false
+  return (
+    <>
+      <CustomWrapper>
+        <Sidebar />
+        <Content />
+      </CustomWrapper>
     </>
-}
+  );
+};
