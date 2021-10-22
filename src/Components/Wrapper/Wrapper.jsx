@@ -1,16 +1,14 @@
-import { Content } from "../Content/Content";
-import { Debug } from "../Debug/Debug";
-import { Sidebar } from "../Sidebar/Sidebar";
-import { CustomWrapper } from "./Wrapper.styled";
-
-export const Wrapper = () => {
-  // const isView = false
+import React from "react";
+import Sidebar from "../Sidebar/Sidebar";
+import Main from "../Main/Main";
+import { Container } from "./Wrapper.styles";
+const Wrapper = () => {
   return (
-    <>
-      <CustomWrapper>
-        <Sidebar />
-        <Content />
-      </CustomWrapper>
-    </>
+    <Container>
+      <Sidebar />
+      <Main />
+    </Container>
   );
 };
+
+export default Wrapper;

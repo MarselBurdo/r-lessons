@@ -1,16 +1,7 @@
-
-import PropTypes from "prop-types";
-import {ReactComponent as PlusIcon} from './icon.svg'
-import './styles.scss'
-
-export const Button= ({label,size})=>{
-
-    
-    return<button  className={'btn__usecase'}><PlusIcon/>{label}</button>
+import React from "react";
+import { CustomButton } from "./Button.styled";
+function Button({ text, onClick }) {
+  return <CustomButton onClick={onClick}>{text}</CustomButton>;
 }
 
-Button.propTypes={
-    label: PropTypes.string.isRequired,
-    size: PropTypes.number,
-
-}
+export default Button;

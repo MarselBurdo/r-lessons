@@ -1,11 +1,20 @@
-import { Debug } from "../Debug/Debug";
-
-export const Sidebar = () => {
+import React from "react";
+import { Aside, Header, MenuItem, Menu, Text } from "./Sidebar.styles";
+import { menuConfig } from "../../utils/menu";
+function Sidebar() {
+  console.log("menuConfig :>> ", menuConfig);
   return (
-    <>
-      <div style={{ width: "400px", backgroundColor: "rgba(23, 23,20, 0.12)" }}>
-        <Debug />
-      </div>
-    </>
+    <Aside>
+      <Header></Header>
+      <Menu>
+        {menuConfig.map(({ name, icon }) => (
+          <MenuItem key={name}>
+            {icon} <Text>{name}</Text>
+          </MenuItem>
+        ))}
+      </Menu>
+    </Aside>
   );
-};
+}
+
+export default Sidebar;
