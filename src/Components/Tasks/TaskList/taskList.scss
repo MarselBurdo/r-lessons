@@ -3,11 +3,12 @@
 }
 
 .TaskList-container_body {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  width: 100px;
+  border: 1px solid tomato;
+  padding: 10px 10px;
   text-align: center;
-  padding: 3px;
+  margin: 10px 10px;
+  background-color: bisque;
 }
 
 .TaskList-container_checkbox {

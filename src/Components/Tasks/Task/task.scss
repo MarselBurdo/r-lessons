@@ -1,6 +1,5 @@
 .Task-container {
   background-color: mistyrose;
-  width: 200vh;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,8 +9,12 @@
 
 .TaskList-container {
   border: 1px solid gray;
-  width: 1200px;
-  height: 700px;
+  width: 500px;
+  margin: 15px;
+  padding: 5px;
   box-sizing: initial;
   background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
