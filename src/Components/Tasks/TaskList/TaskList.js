@@ -8,14 +8,31 @@ export default class TaskList extends Component {
    */
 
   render() {
-    const { done, text } = this.props;
+    const { id, done, text, description, isRequiredTask, taskDone } =
+      this.props;
     return (
-      <div className={"TaskList-container_body"}>
-        <p className={"TaskList-container_title"}>{text}</p>
+      <div className={`TaskList-container_body ${done ? "doneTask" : ""}`}>
+        <h2 className={"TaskList-container_title"}>{text}</h2>
+        <p>{description}</p>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={isRequiredTask}
+            className={"TaskList-container_checkbox"}
+            disabled={true}
+          />{" "}
+          обязательная Задача от мамы
+        </label>
         <input
           type="checkbox"
-          checked={done}
+          id={id}
+          name="done"
+          //проблема была тут
+          // checked={done}
+          disabled={done}
           className={"TaskList-container_checkbox"}
+          onClick={taskDone}
         />
       </div>
     );

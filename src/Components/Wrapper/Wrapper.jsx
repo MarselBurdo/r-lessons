@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import Main from "../Main/Main";
+// import Main from "../Main/Main";
 import { Container } from "./Wrapper.styles";
 import Task from "../Tasks/Task/Task";
 

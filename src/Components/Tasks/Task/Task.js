@@ -18,6 +18,7 @@ export default class Task extends Component {
   }
 
   addTask = (task) => {
+    const { title, description, date, isRequiredTask } = task;
     /**
      * Что было не правильно я попался на мутации state
      * надо быть внимательным, 5 минут перерыва
@@ -27,8 +28,10 @@ export default class Task extends Component {
         ...state.tasks,
         {
           id: state.tasks.length || 0,
-          text: task,
+          text: title,
+          description,
           date: new Date(),
+          isRequiredTask,
           done: false,
         },
       ],
@@ -48,7 +51,7 @@ export default class Task extends Component {
     if (this.state.sortedByDate) {
       return this.state.tasks.sort((a, b) => a.date - b.date);
     }
-    return this.state.tasks.sort((a, b) => a.done - b.done);
+    return this.state.tasks.sort((a, b) => b.isRequiredTask - a.isRequiredTask);
   }
 
   /**
@@ -56,7 +59,22 @@ export default class Task extends Component {
    * Нужно написать функции которые изменяю значание выполнены в таске
    */
 
+  taskdoneHandler = (id) => {
+    // console.log({ name, checked, id });
+
+    // this.setState({ [name]: !checked });
+
+    /**
+     * упростил функцию смострите внимательно  в map
+     */
+    this.setState(({ tasks }) =>
+      tasks.map((task) => (task.id === id ? (task.done = true) : task))
+    );
+  };
+
   render() {
+    const { tasks } = this.state;
+    console.log(tasks);
     return (
       <div className={"Task-container"}>
         <p>Active tasks:{this.activeTask}</p>
@@ -68,9 +86,20 @@ export default class Task extends Component {
           checked={this.state.sortedByDate}
         />
         <div className={"TaskList-container"}>
-          {this.sortedTasks.map(({ id, done, text }) => (
-            <TaskList key={id} done={done} text={text} />
-          ))}
+          {this.sortedTasks.map(
+            ({ id, done, text, description, isRequiredTask }) => (
+              <TaskList
+                key={id}
+                id={id}
+                done={done}
+                text={text}
+                description={description}
+                isRequiredTask={isRequiredTask}
+                // тут просто передал номер данной таски
+                taskDone={() => this.taskdoneHandler(id)}
+              />
+            )
+          )}
         </div>
         <TaskInput addTaskProp={(task) => this.addTask(task)} />
       </div>
