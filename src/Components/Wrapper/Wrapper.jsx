@@ -2,7 +2,8 @@ import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
 // import Main from "../Main/Main";
 import { Container } from "./Wrapper.styles";
-import Task from "../Tasks/Task/Task";
+// import Task from "../Tasks/Task/Task";
+import Order from "../Order/Order";
 
 const Wrapper = () => {
   return (
@@ -10,7 +11,8 @@ const Wrapper = () => {
       <Sidebar />
       {/* <Main /> */}
 
-      <Task />
+      {/* <Task /> */}
+      <Order />
     </Container>
   );
 };
