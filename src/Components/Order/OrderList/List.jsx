@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 
 import "./List.css";
 
-export default function List({ listItems }) {
-  console.log(listItems);
+import Item from "./Item";
 
-  // if (Array.isArray(listItems))
+export default function List({ listItems, onDelete, onPut }) {
+  //clear input
+
   return (
     <div>
       <h2>Order List</h2>
       <ul>
         {listItems &&
-          listItems.map((el) => (
-            <li key={el.id} className={cn("items", { "order-done": el.done })}>
-              {el.text}
-            </li>
+          listItems.map(({ id, text, done }) => (
+            <Item
+              key={id}
+              id={id}
+              text={text}
+              done={done}
+              onDelete={onDelete}
+              onPut={onPut}
+            />
           ))}
       </ul>
     </div>
