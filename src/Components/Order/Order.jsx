@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import AddItem from "./AddItem/AddItem";
 import { api } from "./common.api";
 import List from "./OrderList/List";
-// import LiveCycle from "./LiveCycle";
+import LiveCycle from "./LiveCycle";
 
 export default class Order extends Component {
   state = {
@@ -20,15 +20,15 @@ export default class Order extends Component {
     }));
   };
 
-  async componentDidMount() {
-    const fetchData = await api.get();
-    if (fetchData.success) {
-      this.setState((prev) => ({ ...prev, items: fetchData.data }));
-    }
-    if (fetchData.error) {
-      this.setState((prev) => ({ ...prev, error: fetchData.messege }));
-    }
-  }
+  // async componentDidMount() {
+  //   const fetchData = await api.get();
+  //   if (fetchData.success) {
+  //     this.setState((prev) => ({ ...prev, items: fetchData.data }));
+  //   }
+  //   if (fetchData.error) {
+  //     this.setState((prev) => ({ ...prev, error: fetchData.messege }));
+  //   }
+  // }
 
   handleDeleteItems = (id) => {
     this.setState((prev) => ({
@@ -59,12 +59,13 @@ export default class Order extends Component {
 
     return (
       <div>
-        <List
+        <LiveCycle />
+        {/* <List
           listItems={items}
           onDelete={this.handleDeleteItems}
           onPut={this.handlePutItem}
         />
-        <AddItem changeItems={this.handleChangeItems} items={items} />
+        <AddItem changeItems={this.handleChangeItems} items={items} /> */}
       </div>
     );
   }

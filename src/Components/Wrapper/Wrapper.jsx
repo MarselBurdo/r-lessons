@@ -1,18 +1,20 @@
 import React from "react";
-import Sidebar from "../Sidebar/Sidebar";
+// import Sidebar from "../Sidebar/Sidebar";
 // import Main from "../Main/Main";
 import { Container } from "./Wrapper.styles";
 // import Task from "../Tasks/Task/Task";
-import Order from "../Order/Order";
+// import Order from "../Order/Order";
+import FakeNews from "../FakeNews/FakeNews";
 
 const Wrapper = () => {
   return (
     <Container>
-      <Sidebar />
+      {/* <Sidebar /> */}
       {/* <Main /> */}
 
       {/* <Task /> */}
-      <Order />
+      {/* <Order /> */}
+      <FakeNews />
     </Container>
   );
 };
