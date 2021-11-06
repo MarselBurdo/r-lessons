@@ -9,10 +9,14 @@
   margin: 50px;
 }
 
-.Container-body {
-  width: 1000px;
+.Container-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 10px;
+}
+
+.Container-body {
+  width: 500px;
+  padding: 7px;
 }
