@@ -1,0 +1,16 @@
+.card {
+  border: 1px solid tomato;
+  margin: 5px;
+  padding: 10px;
+}
+
+.card_text {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.detail {
+  border: 2px dashed blue;
+  padding: 30px;
+  background-color: yellow;
+}

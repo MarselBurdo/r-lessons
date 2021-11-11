@@ -1,0 +1,13 @@
+.navSide {
+  background-color: tomato;
+  padding: 30px;
+}
+.navSide ul {
+  list-style: none;
+}
+
+.navSide a {
+  color: wheat;
+  font-size: 14px;
+  font-family: sans-serif;
+}

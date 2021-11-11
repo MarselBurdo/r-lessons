@@ -4,11 +4,14 @@ import App from "./App";
 import "antd/dist/antd.css";
 
 import dotenv from "dotenv";
+import { BrowserRouter } from "react-router-dom";
 dotenv.config();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
