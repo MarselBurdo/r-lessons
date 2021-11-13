@@ -1,0 +1,11 @@
+.form-add {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 20px;
+  justify-content: center;
+}
+
+label {
+  margin: 5px;
+}

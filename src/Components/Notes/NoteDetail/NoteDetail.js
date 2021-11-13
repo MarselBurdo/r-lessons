@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory, useParams, useRouteMatch } from "react-router";
-import { notesData } from "./note";
+import { notesData } from "../note";
+import Comments from "../CommentsByNote/Comments";
 
 export default function NoteDetail() {
   const { slug } = useParams();
@@ -9,7 +10,7 @@ export default function NoteDetail() {
 
   const findNote = notesData.find((el) => el.alias === slug);
 
-  console.log(match);
+  // console.log(match);
 
   return (
     <>
@@ -17,6 +18,7 @@ export default function NoteDetail() {
         <div className="detail">
           <h2>{findNote.title}</h2>
           <p>{findNote.descriprion}</p>
+          <Comments title={findNote.title} />
           <button type="button" onClick={() => history.push("/notes")}>
             Go Back
           </button>

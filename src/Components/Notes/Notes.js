@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 import { notesData } from "./note";
-import NoteDetail from "./NoteDetail";
+import NoteDetail from "./NoteDetail/NoteDetail";
 import "./style.css";
 
 export default function Notes() {
