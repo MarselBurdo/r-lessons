@@ -5,8 +5,10 @@ import MyNewsContext from "./context";
 import "./style.css";
 import CountNews from "./CountNews";
 import CountNewsReducer from "./CountNewsReducer";
+import { useSelector } from "react-redux";
 
 export default function MainNews() {
+  const oddText = useSelector((state) => state.count.odd.text);
   const [inputText, setInpunText] = useState("");
 
   const inputRef = useRef(null);
@@ -71,7 +73,6 @@ export default function MainNews() {
       />
       {/* <CountNews /> */}
 
-      <CountNewsReducer />
       <div className={"Container-container"}>{resultArray}</div>
     </div>
   );

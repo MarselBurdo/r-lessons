@@ -9,6 +9,7 @@ import { NavLink, Route, Switch } from "react-router-dom";
 import "./style.css";
 import NavSide from "../NavSide/NavSide";
 import Notes from "../Notes/Notes";
+import CountNewsRedux from "../FakeNews/CountNewsRedux";
 
 const Wrapper = () => {
   return (
@@ -22,7 +23,7 @@ const Wrapper = () => {
       <div className="main-body">
         <Switch>
           <Route path="/" exact>
-            This is Home Page
+            <CountNewsRedux />
           </Route>
 
           <Route path="/news">

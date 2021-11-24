@@ -59,13 +59,13 @@ export default class Order extends Component {
 
     return (
       <div>
-        <LiveCycle />
-        {/* <List
+        {/* <LiveCycle /> */}
+        <List
           listItems={items}
           onDelete={this.handleDeleteItems}
           onPut={this.handlePutItem}
         />
-        <AddItem changeItems={this.handleChangeItems} items={items} /> */}
+        <AddItem changeItems={this.handleChangeItems} items={items} />
       </div>
     );
   }

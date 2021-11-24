@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, Route } from "react-router-dom";
-import { notesData } from "./note";
+import { getNotes } from "../../redux/actions/noteAction";
+// import { notesData } from "./note";
 import NoteDetail from "./NoteDetail/NoteDetail";
 import "./style.css";
 
 export default function Notes() {
+  const dispatch = useDispatch();
+  const notesDataRedux = useSelector((state) => state.notes);
+
+  useEffect(() => {
+    dispatch(getNotes());
+  }, [dispatch]);
+
   return (
     <>
       <div className="view">
@@ -13,8 +22,8 @@ export default function Notes() {
         </Route> */}
         <Route path="/notes/:slug" component={NoteDetail} />
       </div>
-      {notesData &&
-        notesData.map(({ title, alias, text, author }) => (
+      {notesDataRedux &&
+        notesDataRedux.map(({ title, alias, text, author }) => (
           <div className="card" key={alias}>
             <h3>{title}</h3>
             <p className="card_text">{text}</p>
