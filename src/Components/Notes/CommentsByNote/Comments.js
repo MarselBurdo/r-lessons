@@ -1,7 +1,7 @@
 import React, { lazy, useEffect, useState } from "react";
 import { Suspense } from "react";
 import CommentsList from "./CommentsList/CommentsList";
-import { seedComments } from "./seed";
+import { seedComments } from "../../../utils/seed";
 
 const CommentAdd = lazy(() =>
   import(/* webpackChunkName: "CommentAdd" */ "./CommentAdd/CommentAdd")

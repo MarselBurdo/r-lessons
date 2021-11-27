@@ -10,6 +10,7 @@ import "./style.css";
 import NavSide from "../NavSide/NavSide";
 import Notes from "../Notes/Notes";
 import CountNewsRedux from "../FakeNews/CountNewsRedux";
+import Shop from "../Shop/Shop";
 
 const Wrapper = () => {
   return (
@@ -21,7 +22,7 @@ const Wrapper = () => {
       </div>
 
       <div className="main-body">
-        <Switch>
+        {/* <Switch>
           <Route path="/" exact>
             <CountNewsRedux />
           </Route>
@@ -40,6 +41,12 @@ const Wrapper = () => {
 
           <Route>
             <h2>no Page</h2>
+          </Route>
+        </Switch> */}
+
+        <Switch>
+          <Route path="/shop">
+            <Shop />
           </Route>
         </Switch>
       </div>

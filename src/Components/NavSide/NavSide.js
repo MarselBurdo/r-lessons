@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function NavSide() {
   return (
     <ul>
-      <li>
+      {/* <li>
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
@@ -15,6 +15,9 @@ export default function NavSide() {
       </li>
       <li>
         <NavLink to="/about">About</NavLink>
+      </li> */}
+      <li>
+        <NavLink to="/shop">Shop</NavLink>
       </li>
     </ul>
   );

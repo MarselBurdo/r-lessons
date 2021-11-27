@@ -20,3 +20,14 @@ export const seedComments = () => {
  * id: random.uuid()
  * }
  */
+
+export const seedItems = () => {
+  return Array(16)
+    .fill("")
+    .map((el) => ({
+      price: faker.datatype.number(),
+      title: faker.commerce.productName(),
+      description: faker.commerce.productDescription(10),
+      id: faker.datatype.uuid(),
+    }));
+};
