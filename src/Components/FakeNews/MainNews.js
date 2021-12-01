@@ -8,7 +8,7 @@ import CountNewsReducer from "./CountNewsReducer";
 import { useSelector } from "react-redux";
 
 export default function MainNews() {
-  const oddText = useSelector((state) => state.count.odd.text);
+  const loading = useSelector((state) => state.loading);
   const [inputText, setInpunText] = useState("");
 
   const inputRef = useRef(null);
@@ -72,7 +72,7 @@ export default function MainNews() {
         onChange={handleOnChange}
       />
       {/* <CountNews /> */}
-
+      {loading && <h3>loading data</h3>}
       <div className={"Container-container"}>{resultArray}</div>
     </div>
   );

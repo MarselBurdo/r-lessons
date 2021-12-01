@@ -27,9 +27,7 @@ const Wrapper = () => {
             <CountNewsRedux />
           </Route>
 
-          <Route path="/news">
-            <FakeNews />
-          </Route>
+          
 
           <Route path="/about">
             <Order />
@@ -47,6 +45,9 @@ const Wrapper = () => {
         <Switch>
           <Route path="/shop">
             <Shop />
+          </Route>
+          <Route path="/news">
+            <FakeNews />
           </Route>
         </Switch>
       </div>

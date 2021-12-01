@@ -19,6 +19,9 @@ export default function NavSide() {
       <li>
         <NavLink to="/shop">Shop</NavLink>
       </li>
+      <li>
+        <NavLink to="/news"> Breaking News</NavLink>
+      </li>
     </ul>
   );
 }
