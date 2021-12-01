@@ -8,12 +8,11 @@ import CountNewsReducer from "./CountNewsReducer";
 import { useSelector } from "react-redux";
 
 export default function MainNews() {
+  const news = useSelector((state) => state.news);
   const oddText = useSelector((state) => state.count.odd.text);
   const [inputText, setInpunText] = useState("");
 
   const inputRef = useRef(null);
-
-  const { news } = useContext(MyNewsContext);
 
   const altImg =
     "https://i2.wp.com/programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM.png?ssl=1";

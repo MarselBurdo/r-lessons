@@ -1,11 +1,12 @@
 import { applyMiddleware, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { rootReducer } from "./reducers/rootreducer";
+import thunk from "redux-thunk";
 
 import logger from "redux-logger";
 
 const initialStore = {
-  //   tasks: [],
+  news: [],
   count: {
     counter: 0,
     num: 10,
@@ -21,5 +22,5 @@ const initialStore = {
 export const store = createStore(
   rootReducer,
   initialStore,
-  composeWithDevTools(applyMiddleware(logger))
+  composeWithDevTools(applyMiddleware(thunk, logger))
 );

@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import MainNews from "./MainNews";
-import MyNewsContext from "./context";
+
+import { useDispatch } from "react-redux";
+import { getNews } from "../../redux/actions/newsAction";
 
 export default function FakeNews() {
-  const [news, setNews] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch(
-      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
-    )
-      .then((r) => r.json())
-      .then((response) => setNews(response.articles));
-  }, []);
+    dispatch(getNews());
+  }, [dispatch]);
 
   return (
     <>
-      <MyNewsContext.Provider value={{ news, setNews }}>
-        <MainNews />
-      </MyNewsContext.Provider>
+      <MainNews />
     </>
   );
 }
