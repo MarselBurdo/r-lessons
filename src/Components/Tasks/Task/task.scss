@@ -1,0 +1,20 @@
+.Task-container {
+  background-color: mistyrose;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.TaskList-container {
+  border: 1px solid gray;
+  width: 500px;
+  margin: 15px;
+  padding: 5px;
+  box-sizing: initial;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

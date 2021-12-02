@@ -1,0 +1,20 @@
+.TaskInput-container {
+  width: 500px;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.TaskInput-container_input {
+  width: 60%;
+  color: red;
+  align-self: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.TaskInput-container_button {
+  width: 10%;
+  color: blue;
+}

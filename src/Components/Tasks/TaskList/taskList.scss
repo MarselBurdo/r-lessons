@@ -1,0 +1,20 @@
+.TaskList-container_title {
+  color: green;
+}
+
+.TaskList-container_body {
+  width: 140px;
+  border: 1px solid tomato;
+  padding: 10px 10px;
+  text-align: center;
+  margin: 10px 10px;
+  background-color: bisque;
+}
+.doneTask {
+  background-color: blue;
+  text-decoration: line-through;
+}
+
+.TaskList-container_checkbox {
+  margin-top: 10px;
+}

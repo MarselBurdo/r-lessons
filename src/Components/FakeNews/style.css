@@ -1,0 +1,22 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Container-header {
+  width: 300px;
+  margin: 50px;
+}
+
+.Container-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.Container-body {
+  width: 500px;
+  padding: 7px;
+}

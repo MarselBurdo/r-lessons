@@ -1,0 +1,13 @@
+.comments .author {
+  font-size: 13px;
+  font-family: monospace;
+}
+
+.comments .date {
+  color: gray;
+  font-size: 9px;
+}
+
+.comments p {
+  font-size: 10px;
+}

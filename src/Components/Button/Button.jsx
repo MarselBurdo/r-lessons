@@ -1,11 +1,7 @@
-import PropTypes from "prop-types";
-
-export const Button= ({label,size})=>{
-    return<button  style={{padding:`${size}px`}}>{label}</button>
+import React from "react";
+import { CustomButton } from "./Button.styled";
+function Button({ text, onClick }) {
+  return <CustomButton onClick={onClick}>{text}</CustomButton>;
 }
 
-Button.propTypes={
-    label: PropTypes.string.isRequired,
-    size: PropTypes.number,
-
-}
+export default Button;
